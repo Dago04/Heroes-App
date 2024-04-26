@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 325px;
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
