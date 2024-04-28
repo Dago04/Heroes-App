@@ -1,11 +1,12 @@
 import { Navigate, useParams } from "react-router-dom";
 import { getHeroById } from "../helpers";
 import { useNavigate } from "react-router-dom";
+import { useMemo } from "react";
 
 export const HeroPage = () => {
-    const { id, ...rest } = useParams();
+    const { id, } = useParams();
     const navigate = useNavigate();
-    const hero = getHeroById(id);
+    const hero = useMemo(() => getHeroById(id), [id]);
     const heroImageUrl = `/assets/heroes/${hero.id}.jpg`;
 
     const onReturn = () => {
@@ -15,7 +16,7 @@ export const HeroPage = () => {
         return <Navigate to="/" />;
     }
     return (
-        <div className="flex justify-center items-center min-h-screen">
+        <div className="flex justify-center items-center min-h-screen animate__animated animate__fadeInLeft">
             <div className="max-w-[800px] bg-white border rounded-xl shadow-sm sm:flex">
                 <div className="w-full rounded-lg overflow-hidden  sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-xs">
                     <img className="h-full" src={heroImageUrl} alt="Image Description" />

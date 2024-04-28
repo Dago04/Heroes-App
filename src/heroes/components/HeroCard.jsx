@@ -11,9 +11,9 @@ export const HeroCard = ({
     const heroImageUrl = `/assets/heroes/${id}.jpg`;
 
     return (
-        <div className="flex flex-col bg-white border shadow-lg rounded-x rounded hover:scale-100 ">
+        <div className="flex flex-col bg-white border shadow-lg rounded-x rounded hover:scale-100 text-center animate__animated animate__fadeIn  ">
             <img
-                className="w-full h-80 object-top rounded"
+                className="w-full  object-top rounded"
                 src={heroImageUrl}
                 alt={superhero}
             />
