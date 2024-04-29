@@ -19,7 +19,7 @@ export const Navbar = () => {
                     className=" hover:opacity-80"
                     to="/"
                 >
-                    Asociaciones
+                    Home
                 </Link>
 
                 <div className="flex gap-2">
@@ -38,6 +38,13 @@ export const Navbar = () => {
                         to="/dc"
                     >
                         DC
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) =>
+                            `hover:opacity-80 ${isActive ? 'text-red-500' : ''} `}
+                        to="/search"
+                    >
+                        Search
                     </NavLink>
                 </div>
 

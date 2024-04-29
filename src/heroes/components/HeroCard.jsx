@@ -11,16 +11,16 @@ export const HeroCard = ({
     const heroImageUrl = `/assets/heroes/${id}.jpg`;
 
     return (
-        <div className="flex flex-col bg-white border shadow-lg rounded-x rounded hover:scale-100 text-center animate__animated animate__fadeIn  ">
+        <div className="w-full flex flex-col lg:flex-row  bg-white border shadow-lg rounded-x rounded hover:scale-100  animate__animated animate__fadeIn mb-2  ">
             <img
-                className="w-full  object-top rounded"
+                className="w-full lg:w-52 h-80 object-top object-cover rounded"
                 src={heroImageUrl}
                 alt={superhero}
             />
-            <div className="p-4 md:p-5">
+            <div className="p-4 md:p-5 flex-1 ">
                 <h3 className="text-lg font-bold text-gray-800">{superhero}</h3>
                 <p className="mt-1">{alter_ego}</p>
-                <p>{alter_ego !== characters ? characters : ""}</p>
+                <p className="">{alter_ego !== characters ? characters : ""}</p>
                 <p>
                     <small className="text-slate-500/80">{first_appearance}</small>
                 </p>

@@ -16,9 +16,9 @@ export const HeroPage = () => {
         return <Navigate to="/" />;
     }
     return (
-        <div className="flex justify-center items-center min-h-screen animate__animated animate__fadeInLeft">
+        <div className="flex justify-center items-center min-h-screen ">
             <div className="max-w-[800px] bg-white border rounded-xl shadow-sm sm:flex">
-                <div className="w-full rounded-lg overflow-hidden  sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-xs">
+                <div className="w-full rounded-lg overflow-hidden  sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-xs animate__animated animate__fadeInLeft">
                     <img className="h-full" src={heroImageUrl} alt="Image Description" />
                 </div>
                 <div className="flex flex-wrap ">
