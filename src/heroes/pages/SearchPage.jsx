@@ -11,13 +11,14 @@ export const SearchPage = () => {
     const { q = '' } = queryString.parse(location.search); // get query string
 
     const heroes = getHeroByName(q); // get heroes by name  
-
+    const showSearch = (q.length === 0);
+    const showError = (q.length > 0) && heroes.length === 0;
     const { searchText, onInputChange } = useForm({
         searchText: q
     })
     const onSearchSubmit = (e) => {
         e.preventDefault();
-        if (searchText.trim().length <= 1) return;
+        // if (searchText.trim().length <= 1) return;
 
         navigate(`?q=${searchText}`);
     }
@@ -71,10 +72,10 @@ export const SearchPage = () => {
 
                 <div className="w-full lg:w-2/6 flex flex-col ">
                     <h4 className="text-lg">Results</h4>
-                    <div className=" p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50" role=" alert">
+                    <div className=" p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 animate__animated animate__fadeIn" role=" alert" style={{ display: showSearch ? '' : 'none' }}>
                         <span className="font-medium">Search a hero</span>
                     </div>
-                    <div className=" w-full  p-4 mb-3  text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                    <div className=" w-full  p-4 mb-3  text-sm text-red-800 rounded-lg bg-red-50 animate__animated animate__fadeIn" role="alert" style={{ display: showError ? '' : 'none' }}>
                         <span className="font-medium">No hero with {q}</span>
                     </div>
 
