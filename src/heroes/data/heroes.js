@@ -158,5 +158,13 @@ export const heroes = [
         'alter_ego': 'Norrin Radd',
         'first_appearance': 'The Fantastic Four #48',
         'characters': 'Norrin Radd'
+    },
+    {
+        'id': 'marvel-legion',
+        'superhero': 'Legion',
+        'publisher': 'Marvel Comics',
+        'alter_ego': 'David Charles Haller',
+        'first_appearance': 'New Mutants #25 (November, 1984)',
+        'characters': 'Jack Wayne'
     }
 ]
