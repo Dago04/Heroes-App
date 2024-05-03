@@ -8,7 +8,7 @@ export const HeroCard = ({
     first_appearance,
     characters,
 }) => {
-    const heroImageUrl = `/assets/heroes/${id}.jpg`;
+    const heroImageUrl = `/heroes/${id}.jpg`;
 
     return (
         <div className="w-full flex flex-col lg:flex-row  bg-white border shadow-lg rounded-x rounded hover:scale-100  animate__animated animate__fadeIn mb-2  ">
